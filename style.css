@@ -1,0 +1,95 @@
+@font-face {
+  font-family: Norse;
+  src: url(./Norse-Bold.woff);
+}
+
+:root {
+  --color-text: #dad7cd;
+  --background-general: #344e41;
+  --background-form: #a3b18a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: var(--background-general);
+  margin: 0 25px;
+  height: 100%
+}
+
+main {
+  display: flex;
+  font-family: sans-serif;
+}
+
+#viking-logo {
+  height: 8vh;
+}
+
+#viking-h1 {
+  font-family: Norse;
+  font-size: 32px;
+  color: var(--color-text);
+}
+
+.container-image {
+  width:40vw;
+  height: 100vh;
+  background-image: url("./background-photo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
+  gap: 0.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: 25vh;
+}
+
+.image-credits {
+  font-size: 10px;
+  color: var(--color-text);
+  text-align: center;
+  position: relative;
+  top: 80vh;
+}
+
+a {
+  color: var(--color-text)
+}
+
+a:visited {
+  color: #a3b18a;
+}
+
+a:hover {
+  color: #03045e;
+}
+
+.container-form {
+  text-align: center;
+  width: 60vw;
+  height: 100vh;
+  background-color: var(--background-form);
+}
+
+.form-header,
+.form-footer {
+  height: 32vh;
+}
+
+.form-main {
+  height: 36vh;
+  background-color: #8BB089;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+}
