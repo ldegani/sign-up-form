@@ -9,11 +9,11 @@
     <link rel="icon" type="image/x-icon" href="favicon.png">
   </head>
   <body>
-      <main>
+    <main>
       <div class="container-image">
         <div class="image-heading">        
           <img src="./viking.png" alt="Viking Logo" id="viking-logo">
-          <h1 id="viking-h1">Be a Viking!</h1>
+          <h1 id="viking-h1">Onboard!</h1>
         </div>
         <p class="image-credits">
           Photo by <a href="https://unsplash.com/es/@degre99?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marco De Gregorio</a> on <a href="https://unsplash.com/it/foto/7MpUE1Y1C58?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a><br>
@@ -21,9 +21,47 @@
         </p>
       </div>
       <div class="container-form">
-        <div class="form-header">DIV HEADER</div>
-        <div class="form-main">FORM</div>
-        <div class="form-footer">DIV FOOTER</div>
+        <div class="form-header">
+          <p class="form-header-para">Do you want to be a Viking? Pillage villages, travel in cold northern waters, wear helmets with horns, wield a big sword, and drink beer at 5 am on a Tuesday? Well, you can't.<br>
+          This is <strong>not</strong> a real service, unfortunately
+          </p>
+        </div>
+        <div class="form-main">
+          <span>Let's do this!</span>
+          <form action="#" method="get">
+            <div class="form-container">
+              <div class="input">
+                <label for="user_first_name">First Name*:</label>
+                <input type="text" name="first_name" id="user_first_name" placeholder="Thor" required>
+              </div>
+              <div class="input">
+                <label for="user_last_name">Last Name*:</label>
+                <input type="text" name="last_name" id="user_last_name" placeholder="Odinson" required>
+              </div>
+              <div class="input">  
+                <label for="user_email">E-mail*:</label>
+                <input type="text" name="e-mail" id="user_email" placeholder="odin@example.com" required>
+              </div>
+              <div class="input">
+                <label for="user_helmet">Helmet Size (cm):</label>
+                <input type="number" name="helmet" id="user_helmet" min="54" max="65" step="1" value="54">
+              </div>
+              <div class="input">
+                <label for="user_password">Password*:</label>
+                <input type="password" name="password" id="user_password" 
+                required>  
+              </div>
+              <div class="input">
+                <label for="user_password_confirmed">Confirm Password*:</label>
+                <input type="password" name="password_confirmed" id="user_lpassword_confirmed" required>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-footer">
+          <button type="submit">Create Account</button>
+          <span>Already have an account? <a href="#" id="link-login">Log In!</a></span>
+        </div>
       </div>
     </main>
     <footer></footer>

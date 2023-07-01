@@ -4,9 +4,14 @@
 }
 
 :root {
-  --color-text: #dad7cd;
-  --background-general: #344e41;
-  --background-form: #a3b18a;
+  --font-standard: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  --color-text: #dad7cd; /* timberwolf */
+  --color-text-form: #0C1B33; /* oxford blue */
+
+  --background-general: #00100B; /* night */
+  --background-form: #EEECE8; /* isabelline */
+  --background-form-shade: #E5E2DC; /* platinum */
 }
 
 * {
@@ -14,11 +19,17 @@
   padding: 0;
 }
 
+*:focus {
+  border: none;
+  outline: none;
+}
+
 html,
 body {
   background-color: var(--background-general);
   margin: 0 25px;
-  height: 100%
+  height: 100%;
+  overflow: hidden;
 }
 
 main {
@@ -27,12 +38,12 @@ main {
 }
 
 #viking-logo {
-  height: 8vh;
+  height: 10vh;
 }
 
 #viking-h1 {
   font-family: Norse;
-  font-size: 32px;
+  font-size: 56px;
   color: var(--color-text);
 }
 
@@ -49,8 +60,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2vh;
-  gap: 0.5em;
+  padding: 3vh;
+  gap: 0.8em;
   background-color: rgba(0, 0, 0, 0.5);
   position: relative;
   top: 25vh;
@@ -68,12 +79,14 @@ a {
   color: var(--color-text)
 }
 
-a:visited {
-  color: #a3b18a;
+a:hover,
+#link-login {
+  color: #00100B;
 }
 
-a:hover {
-  color: #03045e;
+#link-login {
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .container-form {
@@ -88,8 +101,85 @@ a:hover {
   height: 32vh;
 }
 
+.form-header,
+.form-main,
+.form-footer {
+  text-align: start;
+  color: var(--color-text-form);
+  overflow: hidden;
+}
+
 .form-main {
+  font-size: 18px;
+  padding: 1em 0 0 2em;
   height: 36vh;
-  background-color: #8BB089;
+  background-color: var(--background-form-shade);
   box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-header-para,
+.form-footer {
+  font-size: 20px;
+  font-family: var(--font-standard);
+  line-height: 1.3em;
+  padding: 2em 10em 2em 2em;
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  gap:0.5em;
+}
+
+button[type=submit] {
+  font-size: 18px;
+  color: var(--color-text);
+  background-color: var(--background-general);
+  border: 1px solid #000;
+  border-radius: 8px;
+  max-width: 10em;
+  padding: 0.4em;
+}
+
+/* FORM STYLING */
+form {
+  margin-top: 0.2em;
+}
+
+.form-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5px 40px;
+}
+
+.input {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+label {
+  margin: 0.3em 0;
+}
+
+input {
+  font-family: inherit;
+  font-size: 80%;
+  background: var(--background-form-shade);
+  border: 1px solid var(--background-general);
+  border-radius: 0.4em;
+
+  width: 15em;
+  padding: 0.2em;
+  padding-left: 0.5em;
+  box-sizing: border-box;
+}
+
+input:focus {
+  background: var(--background-form-shade);
+  border: 1px solid blueviolet;
+  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+input:focus:invalid {
+  border: 1px solid red;
 }
