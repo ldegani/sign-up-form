@@ -10,6 +10,7 @@
   --color-text-form: #0C1B33; /* oxford blue */
 
   --background-general: #00100B; /* night */
+  --background-general-hover: #00291C; /* dark green */
   --background-form: #EEECE8; /* isabelline */
   --background-form-shade: #E5E2DC; /* platinum */
 }
@@ -141,6 +142,14 @@ button[type=submit] {
   padding: 0.4em;
 }
 
+button[type=submit]:hover {
+  background-color: var(--background-general-hover);
+}
+
+button[type=submit]:active {
+  transform: scale(0.99);
+}
+
 /* FORM STYLING */
 form {
   margin-top: 0.2em;
@@ -158,6 +167,7 @@ form {
 }
 
 label {
+  font-size: 16px;
   margin: 0.3em 0;
 }
 
@@ -169,9 +179,11 @@ input {
   border-radius: 0.4em;
 
   width: 15em;
+  min-width: 0.8em;
   padding: 0.2em;
   padding-left: 0.5em;
   box-sizing: border-box;
+  flex: 0 1 auto;
 }
 
 input:focus {
@@ -182,4 +194,10 @@ input:focus {
 
 input:focus:invalid {
   border: 1px solid red;
+}
+
+.error {
+  font-size: 11px;
+  color: red;
+  padding: 0.6em 0;
 }

@@ -44,26 +44,51 @@
               </div>
               <div class="input">
                 <label for="user_helmet">Helmet Size (cm):</label>
-                <input type="number" name="helmet" id="user_helmet" min="54" max="65" step="1" value="54">
+                <input type="number" name="helmet" id="user_helmet" min="54" max="65" step="1" value="54"  onkeydown="return false">
               </div>
               <div class="input">
                 <label for="user_password">Password*:</label>
                 <input type="password" name="password" id="user_password" 
-                required>  
+                required><p id="password_error" class="error"></p>  
               </div>
               <div class="input">
                 <label for="user_password_confirmed">Confirm Password*:</label>
-                <input type="password" name="password_confirmed" id="user_lpassword_confirmed" required>
+                <input type="password" name="password_confirmed" id="user_password_confirmed" required><p id="password_match" class="error"></p>
               </div>
             </div>
           </form>
         </div>
         <div class="form-footer">
-          <button type="submit">Create Account</button>
+          <button type="submit" form="#">Create Account</button>
           <span>Already have an account? <a href="#" id="link-login">Log In!</a></span>
+        </div>
+        <div class="footer">
+          <p>Created By: Lucas Degani</p>
+          <a href="https://github.com/ldegani"><img src="./icons/github.png" alt="GitHub Icon" width="25"></a>
         </div>
       </div>
     </main>
-    <footer></footer>
+    <script>
+      password = document.querySelector('#user_password');
+      passwordConfirmation = document.querySelector('#user_password_confirmed');
+      passwordError = document.querySelector('#password_error');
+      passwordMessage = document.querySelector('#password_match');
+
+      password.addEventListener('input', () => {
+        if (password.value.length < 8) {
+          passwordError.textContent = 'Passwords must be at least 8 characters'
+        } else {
+          passwordError.textContent = '';
+        }
+      })
+
+      passwordConfirmation.addEventListener('input', () => {
+        if (password.value === passwordConfirmation.value) {
+          passwordMessage.textContent = ''
+        } else {
+          passwordMessage.textContent = 'Passwords don\'t match'
+        }
+      });
+    </script>
   </body>
 </html>
