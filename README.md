@@ -1,7 +1,7 @@
 <h1 align="center"> Project Sign-Up Form </h1>
 
 <br>
-This is a part of the **The Odin Project** curriculum to learn web development.
+This is a part of the *The Odin Project* curriculum to learn web development.<br>
 <a href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form">Project Sign-Up Form</a>
 <br>
 <a href="https://ldegani.github.io/sign-up-form/">Live Preview</a>
