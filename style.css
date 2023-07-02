@@ -129,6 +129,12 @@ a:hover,
 .form-footer {
   display: flex;
   flex-direction: column;
+  gap: 1.5em;
+}
+
+.footer-buttons {
+  display: flex;
+  flex-direction: column;
   gap:0.5em;
 }
 
@@ -148,6 +154,19 @@ button[type=submit]:hover {
 
 button[type=submit]:active {
   transform: scale(0.99);
+}
+
+.footer-infos {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.icon-git {
+  width: 1.5em;
 }
 
 /* FORM STYLING */
